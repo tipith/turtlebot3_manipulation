@@ -7,6 +7,30 @@
   <!-- Include OpenMANIPULATOR URDF -->
   <xacro:include filename="$(find turtlebot3_manipulation_description)/urdf/open_manipulator_x.urdf.xacro"/>
 
+  <xacro:include filename="$(find turtlebot3_manipulation_description)/urdf/kinect_sensor.urdf.xacro"/>
+
+ <!--
+  <xacro:include filename="$(find common_sensors)/urdf/sensors/kinect.urdf.xacro">
+    <xacro:arg name="cam_px" value="0.3"/>
+    <xacro:arg name="cam_pz" value="1.0"/>
+    <xacro:arg name="link_name" value="kinect_link"/>
+    <xacro:arg name="camera_name" value="camera_depth"/>
+    <xacro:arg name="parent" value="base_link"/>
+    <xacro:arg name="frame_name" value="camera_depth_optical_frame"/>
+  </xacro:include>
+
+
+  <xacro:include filename="$(find common_sensors)/urdf/sensors/hokuyo_04lx_laser.urdf.xacro">
+    <xacro:arg name="name" value="hokuyo"/>
+    <xacro:arg name="parent" value="base_footprint"/>
+    <xacro:arg name="origin" value="1 1 1"/>
+    <xacro:arg name="ros_topic" value="laser"/>
+    <xacro:arg name="update_rate" value="1"/>
+    <xacro:arg name="min_angle" value="1"/>
+    <xacro:arg name="max_angle" value="2"/>
+  </xacro:include>
+ -->
+
   <!-- Base fixed joint -->
   <joint name="base_fixed" type="fixed">
     <origin xyz="-0.092 0.0 0.091" rpy="0 0 0"/>

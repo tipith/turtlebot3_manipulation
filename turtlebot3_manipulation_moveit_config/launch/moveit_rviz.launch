@@ -13,4 +13,7 @@
     <rosparam command="load" file="$(find turtlebot3_manipulation_moveit_config)/config/kinematics.yaml"/>
   </node>
 
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="tb3_om" >
+  </node>
+
 </launch>

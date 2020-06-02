@@ -3,10 +3,11 @@
   <!-- This file makes it easy to include the settings for sensor managers -->
 
   <!-- Params for 3D sensors config -->
-  <rosparam command="load" file="$(find turtlebot3_manipulation_moveit_config)/config/sensors_3d.yaml" />
+  <arg name="perception" default="empty" />
+  <rosparam command="load" file="$(find turtlebot3_manipulation_moveit_config)/config/sensors_3d_$(arg perception).yaml" />
 
   <!-- Params for the octomap monitor -->
-  <!--  <param name="octomap_frame" type="string" value="some frame in which the robot moves" /> -->
+  <param name="octomap_frame" type="string" value="odom" />
   <param name="octomap_resolution" type="double" value="0.025" />
   <param name="max_range" type="double" value="5.0" />
 
